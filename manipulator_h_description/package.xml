@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>manipulator_h_description</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>The manipulator_h_description package</description>
   <license>BSD</license>
   <author email="sch@robotis.com">sch</author>
