@@ -17,14 +17,9 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(Eigen REQUIRED)
 
-## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
-
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES manipulator_h_base_module
-#  CATKIN_DEPENDS robotis_device roscpp std_msgs
-#  DEPENDS system_lib
 )
 
 include_directories(
@@ -33,7 +28,6 @@ include_directories(
   ${Eigen_INCLUDE_DIRS}
 )
 
-## Declare a C++ library
 add_library(manipulator_h_base_module
   src/base_module.cpp
   src/robotis_state.cpp

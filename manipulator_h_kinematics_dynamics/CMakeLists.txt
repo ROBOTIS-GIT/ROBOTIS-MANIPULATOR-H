@@ -12,8 +12,6 @@ find_package(Eigen REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES manipulator_h_kinematics_dynamics
-#  CATKIN_DEPENDS roscpp
-#  DEPENDS system_lib
 )
 
 include_directories(
