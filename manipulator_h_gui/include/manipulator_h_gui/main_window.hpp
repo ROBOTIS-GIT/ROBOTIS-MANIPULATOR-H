@@ -64,13 +64,13 @@ namespace manipulator_h_gui {
  * @brief Qt central, all operations relating to the view part here.
  */
 class MainWindow : public QMainWindow {
-Q_OBJECT
+    Q_OBJECT
 
 public:
-	MainWindow(int argc, char** argv, QWidget *parent = 0);
-	~MainWindow();
+    MainWindow(int argc, char** argv, QWidget *parent = 0);
+    ~MainWindow();
 
-	void closeEvent(QCloseEvent *event); // Overloaded function
+    void closeEvent(QCloseEvent *event); // Overloaded function
 
     /******************************************
     ** Transformation
@@ -89,9 +89,9 @@ public:
     Eigen::MatrixXd quaternion2rotation( Eigen::Quaterniond quaternion );
 
 public Q_SLOTS:
-	/******************************************
-	** Auto-connections (connectSlotsByName())
-	*******************************************/
+    /******************************************
+        ** Auto-connections (connectSlotsByName())
+        *******************************************/
     void on_actionAbout_triggered();
 
     void on_curr_joint_button_clicked( bool check );
@@ -108,12 +108,12 @@ public Q_SLOTS:
     *******************************************/
     void updateLoggingView(); // no idea why this can't connect automatically
 
-    void update_curr_joint_pose_spinbox( manipulator_h_base_module_msgs::JointPose msg );
-    void update_curr_kinematics_pose_spinbox( manipulator_h_base_module_msgs::KinematicsPose msg );
+    void updateCurrJointPoseSpinbox( manipulator_h_base_module_msgs::JointPose msg );
+    void updateCurrKinematicsPoseSpinbox( manipulator_h_base_module_msgs::KinematicsPose msg );
 
 private:
-	Ui::MainWindowDesign ui;
-	QNode qnode;
+    Ui::MainWindowDesign ui;
+    QNode qnode;
 
     std::vector<std::string> joint_name;
 

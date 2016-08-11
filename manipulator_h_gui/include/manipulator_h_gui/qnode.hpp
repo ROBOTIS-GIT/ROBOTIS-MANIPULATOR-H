@@ -90,62 +90,62 @@ namespace manipulator_h_gui
 
 class QNode: public QThread
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  QNode(int argc, char** argv);
-  virtual ~QNode();
-  bool init();
-  void run();
+    QNode(int argc, char** argv);
+    virtual ~QNode();
+    bool init();
+    void run();
 
-  /*********************
+    /*********************
    ** Logging
    **********************/
-  enum LogLevel
-  {
-    Debug, Info, Warn, Error, Fatal
-  };
+    enum LogLevel
+    {
+        Debug, Info, Warn, Error, Fatal
+    };
 
-  QStringListModel* loggingModel()
-  {
-    return &logging_model_;
-  }
-  void log(const LogLevel &level, const std::string &msg, std::string sender = "GUI");
-  void statusMsgCallback(const robotis_controller_msgs::StatusMsg::ConstPtr &msg);
+    QStringListModel* loggingModel()
+    {
+        return &logging_model_;
+    }
+    void log(const LogLevel &level, const std::string &msg, std::string sender = "GUI");
+    void statusMsgCallback(const robotis_controller_msgs::StatusMsg::ConstPtr &msg);
 
-  void sendIniPoseMsg(std_msgs::String msg);
-  void sendSetModeMsg(std_msgs::String msg);
+    void sendIniPoseMsg(std_msgs::String msg);
+    void sendSetModeMsg(std_msgs::String msg);
 
-  void sendJointPoseMsg(manipulator_h_base_module_msgs::JointPose msg);
-  void sendKinematicsPoseMsg(manipulator_h_base_module_msgs::KinematicsPose msg);
+    void sendJointPoseMsg(manipulator_h_base_module_msgs::JointPose msg);
+    void sendKinematicsPoseMsg(manipulator_h_base_module_msgs::KinematicsPose msg);
 
 public Q_SLOTS:
-  void getJointPose( std::vector<std::string> joint_name );
-  void getKinematicsPose(std::string group_name);
+    void getJointPose( std::vector<std::string> joint_name );
+    void getKinematicsPose(std::string group_name);
 
-  Q_SIGNALS:
-  void loggingUpdated();
-  void rosShutdown();
+Q_SIGNALS:
+    void loggingUpdated();
+    void rosShutdown();
 
-  void updateCurrentJointPose(manipulator_h_base_module_msgs::JointPose);
-  void updateCurrentKinematicsPose(manipulator_h_base_module_msgs::KinematicsPose);
+    void updateCurrentJointPose(manipulator_h_base_module_msgs::JointPose);
+    void updateCurrentKinematicsPose(manipulator_h_base_module_msgs::KinematicsPose);
 
 private:
-  int     init_argc_;
-  char**  init_argv_;
+    int     init_argc_;
+    char**  init_argv_;
 
-  ros::Publisher      chatter_publisher_;
-  QStringListModel    logging_model_;
+    ros::Publisher      chatter_publisher_;
+    QStringListModel    logging_model_;
 
-  ros::Publisher      ini_pose_msg_pub_;
-  ros::Publisher      set_mode_msg_pub_;
+    ros::Publisher      ini_pose_msg_pub_;
+    ros::Publisher      set_mode_msg_pub_;
 
-  ros::Publisher      joint_pose_msg_pub_;
-  ros::Publisher      kinematics_pose_msg_pub_;
+    ros::Publisher      joint_pose_msg_pub_;
+    ros::Publisher      kinematics_pose_msg_pub_;
 
-  ros::ServiceClient  get_joint_pose_client_;
-  ros::ServiceClient  get_kinematics_pose_client_;
+    ros::ServiceClient  get_joint_pose_client_;
+    ros::ServiceClient  get_kinematics_pose_client_;
 
-  ros::Subscriber     status_msg_sub_;
+    ros::Subscriber     status_msg_sub_;
 
 };
 

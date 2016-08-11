@@ -160,7 +160,7 @@ void BaseModule::initPoseMsgCallback(const std_msgs::String::ConstPtr& msg)
     if (msg->data == "ini_pose")
     {
       // parse initial pose
-      std::string ini_pose_path = ros::package::getPath("manipulator_base_module") + "/config/ini_pose.yaml";
+      std::string ini_pose_path = ros::package::getPath("manipulator_h_base_module") + "/config/ini_pose.yaml";
       parseIniPoseData(ini_pose_path);
 
       tra_gene_thread_ = new boost::thread(boost::bind(&BaseModule::generateInitPoseTrajProcess, this));
@@ -214,11 +214,11 @@ bool BaseModule::getKinematicsPoseCallback(manipulator_h_base_module_msgs::GetKi
   if (enable_ == false)
     return false;
 
-  res.group_pose.position.x = manipulator_->manipulator_link_data_[ END_LINK]->position_.coeff(0, 0);
-  res.group_pose.position.y = manipulator_->manipulator_link_data_[ END_LINK]->position_.coeff(1, 0);
-  res.group_pose.position.z = manipulator_->manipulator_link_data_[ END_LINK]->position_.coeff(2, 0);
+  res.group_pose.position.x = manipulator_->manipulator_link_data_[END_LINK]->position_.coeff(0, 0);
+  res.group_pose.position.y = manipulator_->manipulator_link_data_[END_LINK]->position_.coeff(1, 0);
+  res.group_pose.position.z = manipulator_->manipulator_link_data_[END_LINK]->position_.coeff(2, 0);
 
-  Eigen::Quaterniond quaternion = robotis_framework::convertRotationToQuaternion(manipulator_->manipulator_link_data_[ END_LINK]->orientation_);
+  Eigen::Quaterniond quaternion = robotis_framework::convertRotationToQuaternion(manipulator_->manipulator_link_data_[END_LINK]->orientation_);
 
   res.group_pose.orientation.w = quaternion.w();
   res.group_pose.orientation.x = quaternion.x();

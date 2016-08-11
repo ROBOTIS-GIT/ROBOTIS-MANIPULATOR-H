@@ -2,7 +2,7 @@
 
 <launch>    
 
-    <param name="gazebo"                   value="false"     type="bool"/>
+    <param name="gazebo"                   value="true"     type="bool"/>
     <param name="gazebo_robot_name"        value="robotis_manipulator_h" />
 
     <param name="offset_table"             value="$(find manipulator_h_manager)/config/offset.yaml"/>
