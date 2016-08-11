@@ -1,6 +1,12 @@
+################################################################################
+# CMake
+################################################################################
 cmake_minimum_required(VERSION 2.8.3)
 project(manipulator_h_manager)
 
+################################################################################
+# Packages
+################################################################################
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   dynamixel_sdk
@@ -16,19 +22,55 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(Eigen REQUIRED)
 
+################################################################################
+# Declare ROS messages, services and actions
+################################################################################
+
+################################################################################
+# Declare ROS dynamic reconfigure parameters
+################################################################################
+
+################################################################################
+# Catkin specific configuration
+################################################################################
 catkin_package(
   LIBRARIES manipulator_h_manager
 )
 
+################################################################################
+# Build
+################################################################################
 include_directories(
   include
   ${Eigen_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 
-
 add_executable(manipulator_h_manager src/manipulator_h_manager.cpp)
 add_dependencies(manipulator_h_manager ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(manipulator_h_manager
-  ${catkin_LIBRARIES}
+target_link_libraries(manipulator_h_manager ${catkin_LIBRARIES})
+
+################################################################################
+# Install
+################################################################################
+install(TARGETS manipulator_h_manager
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+)
+
+install(DIRECTORY launch/
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(DIRECTORY config/
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+################################################################################
+# Test
+################################################################################
