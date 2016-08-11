@@ -10,14 +10,14 @@ project(manipulator_h_gui)
 ##############################################################################
 
 # qt_build provides the qt cmake glue, roscpp the comms for a default talker
-find_package(catkin REQUIRED COMPONENTS 
-  qt_build 
-  roscpp 
+find_package(catkin REQUIRED COMPONENTS
+  qt_build
+  roscpp
   geometry_msgs
   robotis_controller_msgs
   manipulator_h_base_module_msgs
   cmake_modules
-  eigen_conversions 
+  eigen_conversions
 )
 
 find_package(Eigen REQUIRED)
@@ -29,10 +29,10 @@ include_directories(
 )
 # Use this to define what the package will export (e.g. libs, headers).
 # Since the default here is to produce only a binary, we don't worry about
-# exporting anything. 
+# exporting anything.
 catkin_package(
   INCLUDE_DIRS include
-  CATKIN_DEPENDS 
+  CATKIN_DEPENDS
   roscpp
   geometry_msgs
 )
@@ -41,7 +41,7 @@ catkin_package(
 # Qt Environment
 ##############################################################################
 
-# this comes from qt_build's qt-ros.cmake which is automatically 
+# this comes from qt_build's qt-ros.cmake which is automatically
 # included via the dependency call in package.xml
 rosbuild_prepare_qt4(QtCore QtGui) # Add the appropriate components to the component list here
 
@@ -68,5 +68,6 @@ file(GLOB_RECURSE QT_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINK
 ##############################################################################
 
 add_executable(manipulator_h_gui ${QT_SOURCES} ${QT_RESOURCES_CPP} ${QT_FORMS_HPP} ${QT_MOC_HPP})
+add_dependencies(manipulator_h_gui ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(manipulator_h_gui ${QT_LIBRARIES} ${catkin_LIBRARIES})
 install(TARGETS manipulator_h_gui RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

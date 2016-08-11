@@ -1,34 +1,26 @@
 <?xml version="1.0"?>
 <package>
   <name>manipulator_h_gui</name>
-  <version>0.1.0</version>
-  <description>
-
-     manipulator_h_gui
-
-  </description>
-  <maintainer email="sch@robotis.com">sch</maintainer>
-  <author email="sch@robotis.com">sch</author>
+  <version>0.0.1</version>
+  <description>manipulator_h_gui</description>
   <license>BSD</license>
-  <!-- <url type="bugtracker">https://github.com/stonier/qt_ros/issues</url> -->
-  <!-- <url type="repository">https://github.com/stonier/qt_ros</url> -->
-
+  <author email="sch@robotis.com">sch</author>
+  <maintainer email="pyo@robotis.com">pyo</maintainer>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
+  <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
+  <url type="website">http://wiki.ros.org/ROBOTIS-MANIPULATOR-H</url>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>qt_build</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>libqt4-dev</build_depend>
-
   <build_depend>robotis_controller_msgs</build_depend>
   <build_depend>manipulator_h_base_module_msgs</build_depend>
-
   <run_depend>qt_build</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>libqt4-dev</run_depend>
-
   <build_depend>geometry_msgs</build_depend>
   <build_depend>eigen_conversions</build_depend>
-
   <run_depend>geometry_msgs</run_depend>
   <run_depend>eigen_conversions</run_depend>
- 
+  <export></export>
 </package>
