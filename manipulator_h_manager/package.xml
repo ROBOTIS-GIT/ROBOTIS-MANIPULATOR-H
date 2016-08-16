@@ -2,7 +2,10 @@
 <package>
   <name>manipulator_h_manager</name>
   <version>0.1.1</version>
-  <description>The manipulator_h_manager package</description>
+  <description>
+    The manipulator_h_manager package
+    This package describes robot manager to execute manipulator_h_base_module.
+  </description>
   <license>BSD</license>
   <author email="sch@robotis.com">sch</author>
   <maintainer email="pyo@robotis.com">pyo</maintainer>

@@ -2,7 +2,10 @@
 <package>
   <name>manipulator_h_bringup</name>
   <version>0.1.1</version>
-  <description>The manipulator_h_bringup package</description>
+  <description>
+    The manipulator_h_bringup package
+    This package includes launch file to describe robotis in Rviz.
+  </description>
   <license>BSD</license>
   <author email="sch@robotis.com">sch</author>
   <maintainer email="pyo@robotis.com">pyo</maintainer>

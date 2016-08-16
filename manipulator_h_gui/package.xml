@@ -2,7 +2,11 @@
 <package>
   <name>manipulator_h_gui</name>
   <version>0.1.1</version>
-  <description>manipulator_h_gui</description>
+  <description>
+    The manipulator_h_gui package
+    This package provides simple GUI to control ROBOTIS MANIPULATOR-H.
+    This GUI is connected to manipulator_h_base_module.
+  </description>
   <license>BSD</license>
   <author email="sch@robotis.com">sch</author>
   <maintainer email="pyo@robotis.com">pyo</maintainer>

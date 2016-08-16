@@ -2,7 +2,11 @@
 <package>
   <name>manipulator_h_kinematics_dynamics</name>
   <version>0.1.1</version>
-  <description>The manipulator_h_kinematics_dynamics package</description>
+  <description>
+    The manipulator_h_kinematics_dynamics package
+    This packages provides library of kinematics and dynamics information for ROBOTIS MANIPULATOR-H.
+    Additionally, there are some function to calculate kinematics and dynamics.
+  </description>
   <license>BSD</license>
   <author email="sch@robotis.com">sch</author>
   <maintainer email="pyo@robotis.com">pyo</maintainer>
