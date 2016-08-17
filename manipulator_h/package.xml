@@ -15,7 +15,6 @@
   <run_depend>manipulator_h_bringup</run_depend>
   <run_depend>manipulator_h_description</run_depend>
   <run_depend>manipulator_h_gazebo</run_depend>
-  <run_depend>manipulator_h_gui</run_depend>
   <run_depend>manipulator_h_kinematics_dynamics</run_depend>
   <run_depend>manipulator_h_manager</run_depend>
   <export><metapackage/></export>
