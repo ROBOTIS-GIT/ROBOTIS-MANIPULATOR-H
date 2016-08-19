@@ -2,7 +2,7 @@
 Changelog for package manipulator_h_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.1.1 (2016-08-11)
+0.2.0 (2016-08-19)
 -------------------
-* first public release for Kinetic
+* added manipulator_h_gui package that GUI tool to control ROBOTIS MANIPULATOR-H
 * Contributors: s-changhyun, pyo

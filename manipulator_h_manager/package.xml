@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>manipulator_h_manager</name>
-  <version>0.1.1</version>
+  <version>0.2.0</version>
   <description>
     The manipulator_h_manager package
     This package describes robot manager to execute manipulator_h_base_module.
