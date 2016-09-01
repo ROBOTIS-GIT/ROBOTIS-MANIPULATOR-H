@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <!-- Revolute-Revolute Manipulator -->
 <robot name="robotis_manipulator_h" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- some parameters -->
+  <xacro:property name="pi" value="3.141592654" />
   
   <!-- Import all Gazebo-customization elements, including Gazebo colors -->
   <xacro:include filename="$(find manipulator_h_description)/urdf/manipulator_h.gazebo" />
