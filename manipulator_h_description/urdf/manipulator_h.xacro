@@ -5,6 +5,9 @@
   <!-- some parameters -->
   <xacro:property name="pi" value="3.141592654" />
   
+  <!-- some parameters -->
+  <xacro:property name="pi" value="3.141592654" />
+
   <!-- Import all Gazebo-customization elements, including Gazebo colors -->
   <xacro:include filename="$(find manipulator_h_description)/urdf/manipulator_h.gazebo" />
   <!-- Import Rviz colors -->
