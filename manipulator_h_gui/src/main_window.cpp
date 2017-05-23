@@ -148,18 +148,13 @@ void MainWindow::on_set_mode_button_clicked( bool check )
 
 void MainWindow::updateCurrJointPoseSpinbox( manipulator_h_base_module_msgs::JointPose msg )
 {
-  ROS_INFO("1");
-
   for ( int _name_index = 0; _name_index < msg.name.size(); _name_index++ )
   {
     for ( int _id = 0; _id < joint_name.size();  _id++ )
     {
       if ( msg.name[ _id ] == joint_name[ _name_index ] )
       {
-        ROS_INFO("%f", msg.value[ _id ] * 180.0 / M_PI);
-
         ((QDoubleSpinBox *) joint_spinbox[ _name_index ])->setValue( msg.value[ _id ] * 180.0 / M_PI );
-
         break;
       }
     }
