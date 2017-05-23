@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <package>
   <name>manipulator_h_gui</name>
-  <version>0.2.1</version>
+  <version>0.2.2</version>
   <description>
     The manipulator_h_gui package
     This package provides simple GUI to control ROBOTIS MANIPULATOR-H.
     This GUI is connected to manipulator_h_base_module.
   </description>
   <license>BSD</license>
-  <author email="sch@robotis.com">sch</author>
-  <maintainer email="pyo@robotis.com">pyo</maintainer>
+  <author email="sch@robotis.com">SCH</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
   <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
   <url type="website">http://wiki.ros.org/ROBOTIS-MANIPULATOR-H</url>

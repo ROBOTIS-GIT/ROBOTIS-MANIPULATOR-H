@@ -2,6 +2,11 @@
 Changelog for package manipulator_h_base_module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.2 (2017-05-23)
+-----------
+* updated cmake file for ros install
+* Contributors: SCH
+
 0.2.1 (2016-09-22)
 -----------
 * manipulator_h_gui: package.xml cmake_modules dependency added

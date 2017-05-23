@@ -2,6 +2,12 @@
 Changelog for package manipulator_h_gui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.2 (2017-05-23)
+-----------
+* updated cmake file for ros install
+* deleted logs
+* Contributors: SCH
+
 0.2.1 (2016-09-22)
 -----------
 * manipulator_h_gui: package.xml cmake_modules dependency added
