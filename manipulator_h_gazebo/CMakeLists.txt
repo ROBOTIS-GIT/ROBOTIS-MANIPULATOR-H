@@ -19,11 +19,11 @@ catkin_package()
 ################################################################################
 # Install
 ################################################################################
-install(DIRECTORY launch/
+install(DIRECTORY config/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
-install(DIRECTORY config/
+install(DIRECTORY launch/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
