@@ -2,6 +2,11 @@
 Changelog for package manipulator_h_base_module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.3 (2017-06-09)
+-----------
+* updated CMakeLists.txt & package.yaml to release binary packages
+* Contributors: SCH
+
 0.2.2 (2017-05-23)
 -----------
 * updated cmake file for ros install
