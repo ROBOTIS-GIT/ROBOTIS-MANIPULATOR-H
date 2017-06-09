@@ -2,6 +2,10 @@
 Changelog for package manipulator_h_manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.3 (2017-06-09)
+-----------
+* none
+
 0.2.2 (2017-05-23)
 -----------
 * updated cmake file for ros install
