@@ -10,17 +10,15 @@ set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
 # Packages
 ################################################################################
 find_package(catkin REQUIRED COMPONENTS
-  dynamixel_sdk
-  robotis_device
-  robotis_math
-  robotis_controller_msgs
-  robotis_framework_common
   roscpp
   std_msgs
   geometry_msgs
+  cmake_modules
+  robotis_math
+  robotis_controller_msgs
+  robotis_framework_common
   manipulator_h_kinematics_dynamics
   manipulator_h_base_module_msgs
-  cmake_modules
 )
 
 find_package(Eigen REQUIRED)
@@ -39,6 +37,7 @@ find_package(Eigen REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES manipulator_h_base_module
+  CATKIN_DEPENDS roscpp robotis_math robotis_framework_common
 )
 
 ################################################################################
@@ -63,6 +62,7 @@ target_link_libraries(manipulator_h_base_module yaml-cpp ${catkin_LIBRARIES})
 install(TARGETS manipulator_h_base_module
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 install(DIRECTORY include/${PROJECT_NAME}/
