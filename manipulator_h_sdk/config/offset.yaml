@@ -1,0 +1,23 @@
+offset:
+  left_joint1 : 0
+  left_joint2 : 0
+  left_joint3 : 0
+  left_joint4 : 0
+  left_joint5 : 0
+  right_joint1: 0
+  right_joint2: 0
+  right_joint3: 0
+  right_joint4: 0
+  right_joint5: 0
+init_pose_for_offset_tuner:
+  left_joint1 : 0
+  left_joint2 : 0
+  left_joint3 : 0
+  left_joint4 : 0
+  left_joint5 : 0
+  right_joint1: 0
+  right_joint2: 0
+  right_joint3: 0
+  right_joint4: 0
+  right_joint5: 0
+
