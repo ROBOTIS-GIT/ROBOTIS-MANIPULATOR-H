@@ -115,6 +115,8 @@ private:
   boost::mutex    queue_mutex_;
 
   ros::Publisher  status_msg_pub_;
+  ros::Publisher  goal_joint_state_pub_;
+  ros::Publisher  pre_joint_state_pub_;
 
   CONTROL_TYPE control_type_;
 

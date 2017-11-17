@@ -102,7 +102,9 @@ void ArmControlModule::initialize(const int control_cycle_msec, robotis_framewor
   ros::NodeHandle ros_node;
 
   // Publisher
-  status_msg_pub_       = ros_node.advertise<robotis_controller_msgs::StatusMsg>("/robotis/status", 1);
+  status_msg_pub_           = ros_node.advertise<robotis_controller_msgs::StatusMsg>("/robotis/status", 1);
+  goal_joint_state_pub_     = ros_node.advertise<sensor_msgs::JointState>("robotis/module/goal_joint_state", 1);
+  pre_joint_state_pub_  = ros_node.advertise<sensor_msgs::JointState>("/robotis/module/present_joint_state", 1);
 }
 
 void ArmControlModule::queueThread()
@@ -169,7 +171,8 @@ void ArmControlModule::initJointControl()
                                          des_joint_pos_, des_joint_vel_, des_joint_accel_,
                                          goal_joint_pos_, goal_joint_vel_, goal_joint_accel_);
 
-  tra_err_.resize(number_of_joints_, 0.0);
+  for (int i=0; i<number_of_joints_; i++)
+    tra_err_[i] = 0.0;
 
   if (is_moving_ == true)
     ROS_INFO("[UPDATE] Joint Control");
@@ -396,13 +399,15 @@ void ArmControlModule::process(std::map<std::string, robotis_framework::Dynamixe
     else
       continue;
 
-    double curr_joint_pos = dxl->dxl_state_->present_position_;
+    double pre_joint_pos = dxl->dxl_state_->present_position_;
+    double pre_joint_vel = dxl->dxl_state_->present_velocity_;
     double goal_joint_pos = dxl->dxl_state_->goal_position_;
 
     if (goal_initialize_ == false)
       des_joint_pos_[joint_name_to_id_[joint_name]-1] = goal_joint_pos;
 
-    pre_joint_pos_[joint_name_to_id_[joint_name]-1] = curr_joint_pos;
+    pre_joint_pos_[joint_name_to_id_[joint_name]-1] = pre_joint_pos;
+    pre_joint_vel_[joint_name_to_id_[joint_name]-1] = pre_joint_vel;
   }
 
   goal_initialize_ = true;
@@ -423,16 +428,29 @@ void ArmControlModule::process(std::map<std::string, robotis_framework::Dynamixe
 
   calcRobotPose();
 
-  sensor_msgs::JointState goal_joint_msg;
-
+  sensor_msgs::JointState goal_joint_msg, pre_joint_msg;
   goal_joint_msg.header.stamp = ros::Time::now();
+  pre_joint_msg.header.stamp = ros::Time::now();
+
   /*----- set joint data -----*/
   for (std::map<std::string, robotis_framework::DynamixelState *>::iterator state_iter = result_.begin();
        state_iter != result_.end(); state_iter++)
   {
     std::string joint_name = state_iter->first;
     result_[joint_name]->goal_position_ = des_joint_pos_[joint_name_to_id_[joint_name]-1];
+
+    goal_joint_msg.name.push_back(joint_name);
+    goal_joint_msg.position.push_back(des_joint_pos_[joint_name_to_id_[joint_name]-1]);
+    goal_joint_msg.velocity.push_back(des_joint_vel_[joint_name_to_id_[joint_name]-1]);
+    goal_joint_msg.effort.push_back(des_joint_accel_[joint_name_to_id_[joint_name]-1]);
+
+    pre_joint_msg.name.push_back(joint_name);
+    pre_joint_msg.position.push_back(pre_joint_pos_[joint_name_to_id_[joint_name]-1]);
+    pre_joint_msg.velocity.push_back(pre_joint_vel_[joint_name_to_id_[joint_name]-1]);
   }
+
+  goal_joint_state_pub_.publish(goal_joint_msg);
+  pre_joint_state_pub_.publish(pre_joint_msg);
 }
 
 void ArmControlModule::stop()
