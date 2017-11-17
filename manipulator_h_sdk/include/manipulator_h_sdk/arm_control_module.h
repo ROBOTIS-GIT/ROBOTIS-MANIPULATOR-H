@@ -133,9 +133,11 @@ private:
 
   geometry_msgs::Pose task_goal_msg_;
 
+  std::vector<double_t> tra_err_;
+
   // Joint Command
-  std::vector<double_t> curr_joint_accel_, curr_joint_vel_, curr_joint_pos_;
-  std::vector<double_t> des_joint_accel_,  des_joint_vel_,  des_joint_pos_;
+  std::vector<double_t> pre_joint_accel_, pre_joint_vel_, pre_joint_pos_;
+  std::vector<double_t> des_joint_accel_, des_joint_vel_, des_joint_pos_;
   std::vector<double_t> goal_joint_accel_, goal_joint_vel_, goal_joint_pos_;
 
   std::vector<double_t> des_arm_pos_, des_arm_vel_, des_arm_accel_, des_arm_Q_;

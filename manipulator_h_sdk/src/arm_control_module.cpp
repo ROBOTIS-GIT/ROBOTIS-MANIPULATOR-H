@@ -69,9 +69,9 @@ ArmControlModule::ArmControlModule()
   /* parameter */
   number_of_joints_ = NUM_OF_JOINTS;
 
-  curr_joint_accel_.resize(number_of_joints_, 0.0);
-  curr_joint_vel_.resize(number_of_joints_, 0.0);
-  curr_joint_pos_.resize(number_of_joints_, 0.0);
+  pre_joint_accel_.resize(number_of_joints_, 0.0);
+  pre_joint_vel_.resize(number_of_joints_, 0.0);
+  pre_joint_pos_.resize(number_of_joints_, 0.0);
 
   des_joint_accel_.resize(number_of_joints_, 0.0);
   des_joint_vel_.resize(number_of_joints_, 0.0);
@@ -85,6 +85,8 @@ ArmControlModule::ArmControlModule()
   des_arm_vel_.resize(3, 0.0);
   des_arm_accel_.resize(3, 0.0);
   des_arm_Q_.resize(4, 0.0);;
+
+  tra_err_.resize(number_of_joints_, 0.0);
 }
 
 ArmControlModule::~ArmControlModule()
@@ -166,6 +168,9 @@ void ArmControlModule::initJointControl()
       new robotis_framework::MinimumJerk(ini_time, mov_time,
                                          des_joint_pos_, des_joint_vel_, des_joint_accel_,
                                          goal_joint_pos_, goal_joint_vel_, goal_joint_accel_);
+
+  tra_err_.resize(number_of_joints_, 0.0);
+
   if (is_moving_ == true)
     ROS_INFO("[UPDATE] Joint Control");
   else
@@ -189,6 +194,15 @@ void ArmControlModule::calcJointControl()
 
     queue_mutex_.unlock();
 
+    std::vector<double_t> err;
+    err.resize(number_of_joints_, 0.0);
+
+    for (int i=0; i<number_of_joints_; i++)
+    {
+      err[i] = fabs(des_joint_pos_[i] - pre_joint_pos_[i]);
+      tra_err_[i] += err[i];
+    }
+
     if (mov_step_ == mov_size_-1)
     {
       mov_step_ = 0;
@@ -196,6 +210,14 @@ void ArmControlModule::calcJointControl()
       delete joint_tra_;
 
       control_type_ = NONE;
+
+      ROS_INFO("=== Trajectory Following Error ===");
+      ROS_INFO("joint1: %f", tra_err_[0]);
+      ROS_INFO("joint2: %f", tra_err_[1]);
+      ROS_INFO("joint3: %f", tra_err_[2]);
+      ROS_INFO("joint4: %f", tra_err_[3]);
+      ROS_INFO("joint5: %f", tra_err_[4]);
+      ROS_INFO("joint6: %f", tra_err_[5]);
 
       ROS_INFO("[END] Joint Control");
     }
@@ -277,11 +299,6 @@ void ArmControlModule::calcTaskControl()
 
     task_control_->getTaskPosition(des_arm_pos_);
     task_control_->getTaskOrientation(des_arm_Q_);
-
-//    ROS_INFO("--");
-//    ROS_INFO("pre arm_pos x: %f, y: %f, z: %f", pre_arm_pos_[0], pre_arm_pos_[1], pre_arm_pos_[2]);
-//    ROS_INFO("des_arm_pos_ x: %f, y: %f, z: %f", des_arm_pos_[0], des_arm_pos_[1], des_arm_pos_[2]);
-
 
     if (mov_step_ == mov_size_-1)
     {
@@ -385,7 +402,7 @@ void ArmControlModule::process(std::map<std::string, robotis_framework::Dynamixe
     if (goal_initialize_ == false)
       des_joint_pos_[joint_name_to_id_[joint_name]-1] = goal_joint_pos;
 
-    curr_joint_pos_[joint_name_to_id_[joint_name]-1] = curr_joint_pos;
+    pre_joint_pos_[joint_name_to_id_[joint_name]-1] = curr_joint_pos;
   }
 
   goal_initialize_ = true;
