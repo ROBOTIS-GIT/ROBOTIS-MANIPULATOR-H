@@ -160,7 +160,7 @@
            </size>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="joint_control">
            <attribute name="title">
@@ -666,6 +666,13 @@
                  </property>
                  <property name="value">
                   <double>3.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="task_send_button_2">
+                 <property name="text">
+                  <string>Send Present State</string>
                  </property>
                 </widget>
                </item>

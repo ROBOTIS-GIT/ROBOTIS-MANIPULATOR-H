@@ -144,6 +144,33 @@ void MainWindow::on_task_send_button_clicked( bool check )
   qnode.sendKinematicsPoseMsg( msg );
 }
 
+void MainWindow::on_task_send_button_2_clicked( bool check )
+{
+  manipulator_h_sdk::KinematicsPose msg;
+
+  msg.name = ui.task_group_name_box->currentText().toStdString();
+
+  msg.mov_time = ui.task_mov_time_box->value();
+
+  msg.pose.position.x = ui.present_x_box->value();
+  msg.pose.position.y = ui.present_y_box->value();
+  msg.pose.position.z = ui.present_z_box->value();
+
+  double roll = ui.present_roll_box->value() * DEG2RAD;
+  double pitch = ui.present_pitch_box->value() * DEG2RAD;
+  double yaw = ui.present_yaw_box->value() * DEG2RAD;
+
+  Eigen::Quaterniond QR = rpy2quaternion( roll, pitch, yaw );
+
+  msg.pose.orientation.x = QR.x();
+  msg.pose.orientation.y = QR.y();
+  msg.pose.orientation.z = QR.z();
+  msg.pose.orientation.w = QR.w();
+
+  qnode.sendKinematicsPoseMsg( msg );
+}
+
+
 void MainWindow::on_task_get_button_clicked( bool check )
 {
   std::string group_name = ui.task_group_name_box->currentText().toStdString();

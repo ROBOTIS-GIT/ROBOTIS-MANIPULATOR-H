@@ -106,6 +106,8 @@ public Q_SLOTS:
   void on_task_send_button_clicked( bool check );
   void on_task_get_button_clicked( bool check );
 
+  void on_task_send_button_2_clicked( bool check );
+
   void on_init_pose_button_clicked( bool check );
   void on_zero_pose_button_clicked( bool check );
 
