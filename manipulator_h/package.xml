@@ -1,22 +1,25 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>manipulator_h</name>
   <version>0.2.3</version>
-  <description>ROS packages for the ROBOTIS MANIPULATOR-H (meta package)</description>
-  <license>BSD</license>
+  <description>
+    ROS packages for the ROBOTIS MANIPULATOR-H (metapackage)
+  </description>
+  <license>Apache 2.0</license>
   <author email="sch@robotis.com">SCH</author>
   <maintainer email="pyo@robotis.com">Pyo</maintainer>
-  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
+  <url type="website">http://wiki.ros.org/manipulator_h</url>
+  <url type="emanual">http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/</url>
   <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
-  <url type="website">http://wiki.ros.org/ROBOTIS-MANIPULATOR-H</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>manipulator_h_base_module</run_depend>
-  <run_depend>manipulator_h_base_module_msgs</run_depend>
-  <run_depend>manipulator_h_bringup</run_depend>
-  <run_depend>manipulator_h_description</run_depend>
-  <run_depend>manipulator_h_gazebo</run_depend>
-  <run_depend>manipulator_h_gui</run_depend>
-  <run_depend>manipulator_h_kinematics_dynamics</run_depend>
-  <run_depend>manipulator_h_manager</run_depend>
+  <exec_depend>manipulator_h_base_module</exec_depend>
+  <exec_depend>manipulator_h_base_module_msgs</exec_depend>
+  <exec_depend>manipulator_h_bringup</exec_depend>
+  <exec_depend>manipulator_h_description</exec_depend>
+  <exec_depend>manipulator_h_gazebo</exec_depend>
+  <exec_depend>manipulator_h_gui</exec_depend>
+  <exec_depend>manipulator_h_kinematics_dynamics</exec_depend>
+  <exec_depend>manipulator_h_manager</exec_depend>
   <export><metapackage/></export>
 </package>
