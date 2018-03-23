@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>manipulator_h_description</name>
-  <version>0.2.3</version>
+  <version>0.3.0</version>
   <description>
     The manipulator_h_description package
     This package includes URDF model of ROBOTIS MANIPULATOR-H.
@@ -15,4 +15,7 @@
   <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
   <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz</exec_depend>
 </package>

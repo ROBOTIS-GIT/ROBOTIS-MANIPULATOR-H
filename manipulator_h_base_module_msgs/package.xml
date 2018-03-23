@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>manipulator_h_base_module_msgs</name>
-  <version>0.2.3</version>
+  <version>0.3.0</version>
   <description>
     The manipulator_h_base_module_msgs package
     This package includes ROS messages and services for manipulator_h_base_module_msgs
@@ -15,7 +15,6 @@
   <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
   <depend>std_msgs</depend>
-  <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
   <build_depend>message_generation</build_depend>
   <build_export_depend>message_runtime</build_export_depend>

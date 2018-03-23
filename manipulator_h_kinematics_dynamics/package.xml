@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>manipulator_h_kinematics_dynamics</name>
-  <version>0.2.3</version>
+  <version>0.3.0</version>
   <description>
     The manipulator_h_kinematics_dynamics package
     This packages provides library of kinematics and dynamics information for ROBOTIS MANIPULATOR-H.
@@ -18,4 +18,5 @@
   <depend>roscpp</depend>
   <depend>robotis_math</depend>
   <depend>cmake_modules</depend>
+  <depend>eigen</depend>
 </package>
