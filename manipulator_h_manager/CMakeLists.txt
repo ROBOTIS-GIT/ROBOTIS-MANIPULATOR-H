@@ -1,28 +1,24 @@
 ################################################################################
-# CMake
+# Set minimum required version of cmake, project name and compile options
 ################################################################################
 cmake_minimum_required(VERSION 2.8.3)
 project(manipulator_h_manager)
 
+## Compile as C++11, supported in ROS Kinetic and newer
 set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
 
 ################################################################################
-# Packages
+# Find catkin packages and libraries for catkin and system dependencies
 ################################################################################
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  dynamixel_sdk
-  robotis_framework_common
-  robotis_device
-  robotis_math
   robotis_controller
-  robotis_controller_msgs
-  cmake_modules
-  manipulator_h_kinematics_dynamics
   manipulator_h_base_module
 )
 
-find_package(Eigen REQUIRED)
+################################################################################
+# Setup for python modules and scripts
+################################################################################
 
 ################################################################################
 # Declare ROS messages, services and actions
@@ -33,40 +29,32 @@ find_package(Eigen REQUIRED)
 ################################################################################
 
 ################################################################################
-# Catkin specific configuration
+## Declare catkin specific configuration to be passed to dependent projects
 ################################################################################
 catkin_package(
-  LIBRARIES manipulator_h_manager
+  CATKIN_DEPENDS roscpp robotis_controller manipulator_h_base_module
 )
 
 ################################################################################
 # Build
 ################################################################################
 include_directories(
-  include
-  ${Eigen_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(manipulator_h_manager src/manipulator_h_manager.cpp)
-add_dependencies(manipulator_h_manager ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(manipulator_h_manager ${catkin_LIBRARIES})
+add_executable(${PROJECT_NAME} src/manipulator_h_manager.cpp)
+add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 
 ################################################################################
 # Install
 ################################################################################
-install(TARGETS manipulator_h_manager
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+install(TARGETS ${PROJECT_NAME}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-install(DIRECTORY config/
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
-
-install(DIRECTORY launch/
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+install(DIRECTORY config launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
 ################################################################################

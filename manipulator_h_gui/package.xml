@@ -16,11 +16,11 @@
   <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
   <depend>roscpp</depend>
-  <depend>geometry_msgs</depend>
   <depend>robotis_controller_msgs</depend>
   <depend>manipulator_h_base_module_msgs</depend>
-  <depend>eigen_conversions</depend>
   <depend>qt_build</depend>
   <depend>libqt4-dev</depend>
   <depend>cmake_modules</depend>
+  <depend>eigen_conversions</depend>
+  <depend>eigen</depend>
 </package>

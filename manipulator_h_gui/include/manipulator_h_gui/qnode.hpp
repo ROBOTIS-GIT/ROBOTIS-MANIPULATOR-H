@@ -39,13 +39,9 @@
 #include <QThread>
 #include <QStringListModel>
 
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Eigen>
 
 #include <std_msgs/String.h>
-#include <std_msgs/Bool.h>
-#include <std_msgs/Float64.h>
-#include <sensor_msgs/JointState.h>
-#include <geometry_msgs/Pose.h>
 
 #include "robotis_controller_msgs/JointCtrlModule.h"
 #include "robotis_controller_msgs/StatusMsg.h"

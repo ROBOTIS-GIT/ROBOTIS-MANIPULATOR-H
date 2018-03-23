@@ -15,11 +15,6 @@
   <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
   <depend>roscpp</depend>
-  <depend>robotis_controller_msgs</depend>
-  <depend>cmake_modules</depend>
-  <depend>dynamixel_sdk</depend>
-  <depend>robotis_framework_common</depend>
   <depend>robotis_controller</depend>
-  <depend>robotis_device</depend>
   <depend>manipulator_h_base_module</depend>
 </package>

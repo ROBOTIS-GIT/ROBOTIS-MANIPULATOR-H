@@ -18,4 +18,5 @@
   <depend>roscpp</depend>
   <depend>robotis_math</depend>
   <depend>cmake_modules</depend>
+  <depend>eigen</depend>
 </package>

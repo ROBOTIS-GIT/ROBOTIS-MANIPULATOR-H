@@ -17,6 +17,8 @@
 #ifndef MANIPULATOR_BASE_MODULE_ROBOTIS_STATE_H_
 #define MANIPULATOR_BASE_MODULE_ROBOTIS_STATE_H_
 
+#include <eigen3/Eigen/Eigen>
+
 #include <std_msgs/Float64.h>
 #include <std_msgs/String.h>
 
