@@ -22,7 +22,8 @@ find_package(catkin REQUIRED COMPONENTS
   manipulator_h_kinematics_dynamics
 )
 
-find_package(Eigen REQUIRED)
+find_package(Boost REQUIRED COMPONENTS thread)
+find_package(Eigen3 REQUIRED)
 
 # Resolve system dependency on yaml-cpp, which apparently does not
 # provide a CMake find_package() module.
