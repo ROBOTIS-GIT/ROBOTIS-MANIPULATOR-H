@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>manipulator_h_bringup</name>
   <version>0.2.3</version>
   <description>
     The manipulator_h_bringup package
     This package includes launch file to describe robotis in Rviz.
   </description>
-  <license>BSD</license>
+  <license>Apache 2.0</license>
   <author email="sch@robotis.com">SCH</author>
   <maintainer email="pyo@robotis.com">Pyo</maintainer>
-  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
+  <url type="website">http://wiki.ros.org/manipulator_h_bringup</url>
+  <url type="emanual">http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/</url>
   <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
-  <url type="website">http://wiki.ros.org/ROBOTIS-MANIPULATOR-H</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <export></export>
 </package>

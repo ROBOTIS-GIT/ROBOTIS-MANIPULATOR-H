@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>manipulator_h_gazebo</name>
   <version>0.2.3</version>
   <description>
@@ -7,12 +7,12 @@
     This package provides GAZEBO simulation environment for ROBOTIS MANIPULATOR-H.
     We provides two controllers such as position and effort controllers.
   </description>
-  <license>BSD</license>
+  <license>Apache 2.0</license>
   <author email="sch@robotis.com">SCH</author>
   <maintainer email="pyo@robotis.com">Pyo</maintainer>
-  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
+  <url type="website">http://wiki.ros.org/manipulator_h_gazebo</url>
+  <url type="emanual">http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/</url>
   <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
-  <url type="website">http://wiki.ros.org/ROBOTIS-MANIPULATOR-H</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <export></export>
 </package>
