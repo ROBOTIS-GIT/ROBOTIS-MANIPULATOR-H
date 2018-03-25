@@ -2,6 +2,11 @@
 Changelog for package manipulator_h_base_module_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.1 (2018-03-26)
+------------------
+* added roslib for catkin dependencies
+* Contributors: Pyo
+
 0.3.0 (2018-03-23)
 ------------------
 * modified build option and dependencies

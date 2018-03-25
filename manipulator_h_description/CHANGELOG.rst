@@ -2,6 +2,10 @@
 Changelog for package manipulator_h_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.1 (2018-03-26)
+------------------
+* none
+
 0.3.0 (2018-03-23)
 ------------------
 * modified build option and dependencies
