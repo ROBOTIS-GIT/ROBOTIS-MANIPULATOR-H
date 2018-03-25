@@ -12,6 +12,7 @@ add_compile_options(-std=c++11)
 ################################################################################
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  roslib
   std_msgs
   geometry_msgs
   robotis_controller_msgs
@@ -61,7 +62,7 @@ endif(NOT ${YAML_CPP_VERSION} VERSION_LESS "0.5")
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS roscpp std_msgs geometry_msgs robotis_controller_msgs manipulator_h_base_module_msgs cmake_modules robotis_math robotis_framework_common manipulator_h_kinematics_dynamics
+  CATKIN_DEPENDS roscpp roslib std_msgs geometry_msgs robotis_controller_msgs manipulator_h_base_module_msgs cmake_modules robotis_math robotis_framework_common manipulator_h_kinematics_dynamics
   DEPENDS Boost EIGEN3  
 )
 
