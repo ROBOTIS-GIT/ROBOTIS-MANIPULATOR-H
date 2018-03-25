@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>manipulator_h_base_module</name>
-  <version>0.3.0</version>
+  <version>0.3.1</version>
   <description>
     The manipulator_h_base_module package
     This package describes basic function to control ROBOTIS MANIPULATOR-H.
@@ -17,6 +17,7 @@
   <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
   <depend>roscpp</depend>
+  <depend>roslib</depend>
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>robotis_controller_msgs</depend>
