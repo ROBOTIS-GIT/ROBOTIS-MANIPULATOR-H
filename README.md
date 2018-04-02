@@ -1,8 +1,11 @@
+# ROBOTIS MANIPULATOR-H
+![](http://emanual.robotis.com/assets/images/platform/manipulator/manipulator_product.gif)
+
 ## ROS Packages for ROBOTIS MANIPULATOR-H 
 
 |Version|Kinetic + Ubuntu Xenial|Melodic + Ubuntu Bionic|
 |:---:|:---:|:---:|
-|[![GitHub version](https://badge.fury.io/gh/ROBOTIS-GIT%2FROBOTIS-MANIPULATOR-H.svg)](https://badge.fury.io/gh/ROBOTIS-GIT%2FROBOTIS-MANIPULATOR-H)|[![Build Status](https://travis-ci.org/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H.svg?branch=master)](https://travis-ci.org/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H)|-|
+|[![GitHub version](https://badge.fury.io/gh/ROBOTIS-GIT%2FROBOTIS-MANIPULATOR-H.svg)](https://badge.fury.io/gh/ROBOTIS-GIT%2FROBOTIS-MANIPULATOR-H)|[![Build Status](https://travis-ci.org/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H.svg?branch=kinetic-devel)](https://travis-ci.org/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H)|-|
 
 ## ROBOTIS e-Manual for ROBOTIS MANIPULATOR-H
 - [ROBOTIS e-Manual for ROBOTIS MANIPULATOR-H](http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/)
