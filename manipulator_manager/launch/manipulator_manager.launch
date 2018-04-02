@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<launch>    
+
+    <param name="gazebo"                   value="false"     type="bool"/>
+    <param name="gazebo_robot_name"        value="robotis_manipulator" />
+
+    <param name="offset_table"             value="$(find manipulator_manager)/config/offset.yaml"/>
+    <param name="robot_file_path"          value="$(find manipulator_manager)/config/MANIPULATOR.robot"/>
+    <param name="init_file_path"           value="$(find manipulator_manager)/config/dxl_init.yaml"/>
+      
+    <!-- Manipulator Manager -->
+    <node name="manipulator_manager" pkg="manipulator_manager" type="manipulator_manager" output="screen"/>
+    
+</launch>
+

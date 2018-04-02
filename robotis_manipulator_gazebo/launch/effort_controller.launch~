@@ -1,0 +1,16 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find robotis_manipulator_gazebo)/config/effort_controller.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/robotis_manipulator" args="joint_state_controller
+				       		        joint1_eff
+				       		  	joint2_eff
+				       		  	joint3_eff
+				      		 	joint4_eff
+				     		 	joint5_eff
+				      		 	joint6_eff"/>
+
+</launch>

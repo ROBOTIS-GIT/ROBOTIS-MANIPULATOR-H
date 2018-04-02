@@ -1,0 +1,35 @@
+# scenario
+
+phase_1 :
+  1 : go_ini_pose
+  2 : go_base_pose
+  3 : get_ar_pose
+  4 : go_down
+  5 : grip_on
+  6 : go_up
+  7 : go_center
+  8 : go_center_down
+  9 : grip_off
+  10 : go_center_up
+  
+
+phase_2 :
+  1 : go_ini_pose
+  2 : go_base_pose
+  3 : get_ar_pose
+  4 : go_down
+  5 : grip_on
+  6 : go_up
+  7 : go_center
+  8 : go_center_down
+  9 : grip_off
+  10 : go_center_up
+
+phase_3 :
+  1 : go_ini_pose
+  2 : go_clean_pose_1
+  3 : clean_up_1
+  4 : go_ini_pose_1
+  5 : go_clean_pose_2
+  6 : clean_up_2
+  

@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robotis_manipulator_description
+    relative_path: urdf/robotis_manipulator.xacro
+  SRDF:
+    relative_path: config/robotis_manipulator.srdf
+  CONFIG:
+    generated_timestamp: 1458715540

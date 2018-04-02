@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node pkg="robotis_manipulator_gui" type="robotis_manipulator_gui" name="robotis_manipulator_gui" output="screen">
+    <param name="ar_1_x_offset" type="double" value="-0.02" />
+    <param name="ar_1_y_offset" type="double" value="0.005" />
+    <param name="ar_2_x_offset" type="double" value="-0.03" />
+    <param name="ar_2_y_offset" type="double" value="0.0" />
+  </node>
+
+</launch>

@@ -1,0 +1,30 @@
+robotis_manipulator_h:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 125  
+  
+  # Position Controllers ---------------------------------------
+  joint1_eff:
+    type: effort_controllers/JointEffortController
+    joint: joint1
+
+  joint2_eff:
+    type: effort_controllers/JointEffortController
+    joint: joint2
+
+  joint3_eff:
+    type: effort_controllers/JointEffortController
+    joint: joint3
+
+  joint4_eff:
+    type: effort_controllers/JointEffortController
+    joint: joint4
+
+  joint5_eff:
+    type: effort_controllers/JointEffortController
+    joint: joint5
+
+  joint6_eff:
+    type: effort_controllers/JointEffortController
+    joint: joint6
