@@ -1,136 +1,105 @@
-joint1 :   # XH54-200-S500-R
+
+joint1 :   # H54-200-S500-R
    return_delay_time     :  10
    operating_mode        :  3
    shutdown              :  58
    homing_offset         :  0
-   current_limit         :  22740
-   max_position_limit    :  501923
-   min_position_limit    : -501923
-   goal_current          :  22740
-   profile_velocity      :  10000 #14555
-   profile_acceleration  :  1002000 #1702000 #1002000000
-   position_p_gain       :  98
-   velocity_p_gain       :  615
-   velocity_i_gain       :  11
-   indirect_address_12   :  564
-   indirect_address_13   :  565
-   indirect_address_14   :  566
-   indirect_address_15   :  567
+   torque_limit          :  1240
+   max_position_limit    :  250950
+   min_position_limit    : -250950
+   goal_torque           : 1240
+   goal_velocity         : 0
+   goal_acceleration     : 0
+   position_p_gain       : 32
+   velocity_p_gain       : 399
+   velocity_i_gain       : 14
 
-joint2 :   # XH54-200-S500-R
+joint2 :   # H54-200-S500-R
    return_delay_time     :  10
    operating_mode        :  3
    shutdown              :  58
    homing_offset         :  0
-   current_limit         :  22740
-   max_position_limit    :  501923
-   min_position_limit    : -501923
-   goal_current          : 22740
-   profile_velocity      : 10000 #14555
-   profile_acceleration  : 1002000 #1702000 #1002000000
-   position_p_gain       : 196 #98
-   velocity_p_gain       : 615
-   velocity_i_gain       : 11
-   indirect_address_12   :  564
-   indirect_address_13   :  565
-   indirect_address_14   :  566
-   indirect_address_15   :  567
+   torque_limit          :  1240
+   max_position_limit    :  250950
+   min_position_limit    : -250950
+   goal_torque           : 1240
+   goal_velocity         : 0
+   goal_acceleration     : 0
+   position_p_gain       : 32
+   velocity_p_gain       : 399
+   velocity_i_gain       : 14
 
-joint3 :   # XH54-100-S500-R
-   return_delay_time     :  10
+joint3 :   # H54-100-S500-R
+   return_delay_time     :  10    # item name : value
    operating_mode        :  3
    shutdown              :  58
-   homing_offset         :  -125481   # 45 deg
-   current_limit         :  15900
-   max_position_limit    :  501923
-   min_position_limit    : -501923
-   goal_current          : 15900
-   profile_velocity      : 10000 #14565
-   profile_acceleration  : 1068000 #1768000 #1068000000
-   position_p_gain       : 157
-   velocity_p_gain       : 359
-   velocity_i_gain       : 6
-   indirect_address_12   :  564
-   indirect_address_13   :  565
-   indirect_address_14   :  566
-   indirect_address_15   :  567
+   homing_offset         :  -62738   # 45 deg
+   torque_limit          :  310
+   max_position_limit    :  250950
+   min_position_limit    : -250950
+   goal_torque           : 310
+   goal_velocity         : 0
+   goal_acceleration     : 0
+   position_p_gain       : 32
+   velocity_p_gain       : 256
+   velocity_i_gain       : 16
 
-joint4 :   # XH54-100-S500-R
-   return_delay_time     :  10
+joint4 :   # H54-100-S500-R
+   return_delay_time     :  10    # item name : value
    operating_mode        :  3
    shutdown              :  58
    homing_offset         :  0
-   current_limit         :  15900
-   max_position_limit    :  501923
-   min_position_limit    : -501923
-   goal_current          : 15900
-   profile_velocity      : 10000 #14565
-   profile_acceleration  : 1068000 #1768000 #1068000000
-   position_p_gain       : 157
-   velocity_p_gain       : 359
-   velocity_i_gain       : 6
-   indirect_address_12   :  564
-   indirect_address_13   :  565
-   indirect_address_14   :  566
-   indirect_address_15   :  567
+   torque_limit          :  310
+   max_position_limit    :  250950
+   min_position_limit    : -250950
+   goal_torque           : 310
+   goal_velocity         : 0
+   goal_acceleration     : 0
+   position_p_gain       : 32
+   velocity_p_gain       : 256
+   velocity_i_gain       : 16
 
 joint5  :   # H42-20-S300-R
    return_delay_time     : 10
    operating_mode        : 3
    shutdown              : 58
    homing_offset         : 0
-   current_limit         : 4500
-   max_position_limit    : 303750
-   min_position_limit    : -303750
-   goal_current          : 4500
-   profile_velocity      : 5000 #8869
-   profile_acceleration  : 654000 #1954000 #654000000
-   position_p_gain       : 111 #333
-   velocity_p_gain       : 222 #666
-   velocity_i_gain       : 13
-   indirect_address_12   :  564
-   indirect_address_13   :  565
-   indirect_address_14   :  566
-   indirect_address_15   :  567
+   torque_limit          : 372
+   max_position_limit    : 151900
+   min_position_limit    : -151900
+   goal_torque           : 372
+   goal_velocity         : 0
+   goal_acceleration     : 0
+   position_p_gain       : 32
+   velocity_p_gain       : 440
+   velocity_i_gain       : 40
 
 joint6  :   # H42-20-S300-R
    return_delay_time     : 10
    operating_mode        : 3
    shutdown              : 58
    homing_offset         : 0
-   current_limit         : 4500
-   max_position_limit    : 303750
-   min_position_limit    : -303750
-   goal_current          : 4500
-   profile_velocity      : 5000 #8869
-   profile_acceleration  : 654000 #1954000 #654000000
-   position_p_gain       : 111 #333
-   velocity_p_gain       : 222 #666
-   velocity_i_gain       : 13
-   indirect_address_12   :  564
-   indirect_address_13   :  565
-   indirect_address_14   :  566
-   indirect_address_15   :  567
+   torque_limit          : 372
+   max_position_limit    : 151900
+   min_position_limit    : -151900
+   goal_torque           : 372
+   goal_velocity         : 0
+   goal_acceleration     : 0
+   position_p_gain       : 32
+   velocity_p_gain       : 440
+   velocity_i_gain       : 40
 
 grip  :   # GRIPPER
    return_delay_time     :   10
-   operating_mode        :    5
+   operating_mode        :    3
    shutdown              :   48
    #homing_offset        :    0  there is no homming offset in ctrl table of gripper
    torque_limit          :  450
    max_position_limit    :  750
    min_position_limit    :    0
-   goal_torque           :   100
+   goal_torque           :  310
    goal_velocity         :    0
    goal_acceleration     :    0
-   position_p_gain       :   64
-   velocity_p_gain       :  440
-   velocity_i_gain       :   40
-   indirect_address_12   :  596
-   indirect_address_13   :  597
-   indirect_address_14   :  598
-   indirect_address_15   :  599
-   external_port_mod_1   : 1
-   external_port_mod_2   : 1
-   external_port_mod_3   : 1
-   external_port_mod_4   : 1
+   position_P_gain       :   64
+   velocity_P_gain       :  440
+   velocity_I_gain       :   40
