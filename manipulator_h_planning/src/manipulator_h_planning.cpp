@@ -54,7 +54,7 @@ void* plan_trajectory_proc(void* arg)
   group.setPoseTarget( target_pose );
 
   /* motion planning */
-  success = group.plan( my_plan );
+  success = (group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
 
   if ( success == true )
   {
