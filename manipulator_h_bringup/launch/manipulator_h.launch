@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+	<arg name="use_present" default="true" />
+
+	<param name="robot_description"
+		command="$(find xacro)/xacro.py '$(find robotis_manipulator_description)/urdf/robotis_manipulator.xacro'" />
+
+	<!-- send joint values -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+		<param name="use_gui" value="FALSE"/>
+ 		<param name="rate" value="125"/>
+ 	        <remap from="/joint_states" to="/robotis/manipulator/joint_states" />
+        	<rosparam param="source_list" if="$(arg use_present)">["robotis/manipulator/present_joint_states"]</rosparam>
+        	<rosparam param="source_list" unless="$(arg use_present)">["robotis/manipulator/goal_joint_states"]</rosparam>
+   	</node>
+
+	<!-- Combine joint values to TF-->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" respawn="true" output="screen">
+		<remap from="/joint_states" to="/robotis/manipulator/joint_states"/>
+	</node>
+
+	<!-- gripper pub -->
+	<node name="manipulator_rviz_pub" pkg="robotis_manipulator_bringup" type="manipulator_rviz_pub">
+	</node>
+
+	<!-- Show in Rviz -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find robotis_manipulator_description)/launch/robotis_manipulator.rviz"/>
+
+</launch>
