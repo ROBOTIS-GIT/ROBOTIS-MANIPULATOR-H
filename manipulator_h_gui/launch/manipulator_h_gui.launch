@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node pkg="manipulator_h_gui" type="manipulator_h_gui" name="manipulator_h_gui" output="screen">
+    <!--<param name="ar_1_x_offset" type="double" value="0.0" />
+    <param name="ar_1_y_offset" type="double" value="0.0" />
+    <param name="ar_2_x_offset" type="double" value="0.0" />
+    <param name="ar_2_y_offset" type="double" value="0.0" />-->
+    <param name="ar_1_x_offset" type="double" value="-0.007" />
+    <param name="ar_1_y_offset" type="double" value="0.0" />
+    <param name="ar_2_x_offset" type="double" value="-0.015" />
+    <param name="ar_2_y_offset" type="double" value="-0.01" />
+  </node>
+
+</launch>

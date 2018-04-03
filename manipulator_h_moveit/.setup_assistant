@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: manipulator_h_description
+    relative_path: urdf/manipulator_h.xacro
+  SRDF:
+    relative_path: config/robotis_manipulator_h.srdf
+  CONFIG:
+    author_name: SCH
+    author_email: sch@robotis.com
+    generated_timestamp: 1522718608
