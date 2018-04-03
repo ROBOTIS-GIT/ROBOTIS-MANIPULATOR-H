@@ -22,5 +22,5 @@
   <param name="sample_duration" value="0.02" />
 
   <rosparam command="load" file="$(find manipulator_h_moveit)/config/ompl_planning.yaml"/>
-  <rosparam command="load" file="$(find robotis_manipulator_moveit)/config/smoothing_filter_params.yaml"/>
+  <rosparam command="load" file="$(find manipulator_h_moveit)/config/smoothing_filter_params.yaml"/>
 </launch>
