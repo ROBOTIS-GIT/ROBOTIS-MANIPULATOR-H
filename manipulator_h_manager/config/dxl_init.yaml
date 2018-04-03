@@ -100,6 +100,6 @@ grip  :   # GRIPPER
    goal_torque           :  310
    goal_velocity         :    0
    goal_acceleration     :    0
-   position_P_gain       :   64
-   velocity_P_gain       :  440
-   velocity_I_gain       :   40
+   position_p_gain       :   64
+   velocity_p_gain       :  440
+   velocity_i_gain       :   40

@@ -3,7 +3,7 @@ control_cycle = 20   # milliseconds
 
 [ port info ]
 # PORT NAME  | BAUDRATE
-/dev/ttyUSB0 | 1000000  | joint1
+/dev/ttyUSB0 | 2000000  | joint1
 
 [ device info ]
 # TYPE    | PORT NAME    | ID  | MODEL          | PROTOCOL | DEV NAME | BULK READ ITEMS
