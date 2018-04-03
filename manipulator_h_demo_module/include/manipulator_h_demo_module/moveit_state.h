@@ -7,7 +7,6 @@
 #include <std_msgs/String.h>
 #include <sensor_msgs/JointState.h>
 #include <control_msgs/JointControllerState.h>
-#include <eigen_conversions/eigen_msg.h>
 
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>

@@ -20,16 +20,15 @@ find_package(catkin REQUIRED COMPONENTS
   cmake_modules
 )
 
-find_package(Eigen REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 catkin_package(
-  INCLUDE_DIRS include
+  DEPENDS EIGEN3
 )
 
 include_directories(
-  include
   ${catkin_INCLUDE_DIRS}
-  ${Eigen_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIRS}
 )
 
 add_executable(manipulator_h_planning
@@ -38,6 +37,4 @@ add_executable(manipulator_h_planning
 
 add_dependencies(manipulator_h_planning ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-target_link_libraries(manipulator_h_planning
-  ${catkin_LIBRARIES}
-)
+target_link_libraries(manipulator_h_planning ${catkin_LIBRARIES} ${Eigen3_LIBRARIES})
