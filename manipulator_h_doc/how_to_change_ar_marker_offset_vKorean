@@ -1,0 +1,10 @@
+1. 데스크탑에 있는 아이콘 manipulator_h_gui.launch를 클릭
+
+2.  <param name="ar_1_x_offset" type="double" value="-0.007" />
+    <param name="ar_1_y_offset" type="double" value="0.0" />
+    <param name="ar_2_x_offset" type="double" value="-0.015" />
+    <param name="ar_2_y_offset" type="double" value="-0.01" />
+
+    각각 마커의 x, y offset 을 설정
+
+3. 변경 후 ./demo4.sh를 다시 실행

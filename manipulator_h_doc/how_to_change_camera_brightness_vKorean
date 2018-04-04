@@ -1,0 +1,9 @@
+1. 데스크탑에 있는 아이콘 ar_robotis_demo.launch를 클릭
+
+2. <param name="brightness" value="100" />
+
+   안에 있는 값 "100"을 변경함
+
+   높을수록 화면이 밝아짐
+
+3. 변경 후 ./demo3.sh를 다시 실행
