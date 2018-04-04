@@ -831,66 +831,66 @@ void QNode::RobotisDemoMsgCallback( std_msgs::String after_robotis_demo_msg )
 
 void QNode::laserOn()
 {
-  robotis_controller_msgs::SyncWriteItem msg, empty_msg;
+//  robotis_controller_msgs::SyncWriteItem msg, empty_msg;
 
-  msg.item_name = "external_port_data_1";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(1);
+//  msg.item_name = "external_port_data_1";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(1);
 
-  sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_2";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(1);
+//  msg.item_name = "external_port_data_2";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(1);
 
-  sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_3";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(1);
+//  msg.item_name = "external_port_data_3";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(1);
 
-  sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_4";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(1);
+//  msg.item_name = "external_port_data_4";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(1);
 
-  sendSyncSWriteItemMsg(msg);
+//  sendSyncSWriteItemMsg(msg);
 }
 
 void QNode::laserOff()
 {
-  robotis_controller_msgs::SyncWriteItem msg, empty_msg;
+//  robotis_controller_msgs::SyncWriteItem msg, empty_msg;
 
-  msg.item_name = "external_port_data_1";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(0);
+//  msg.item_name = "external_port_data_1";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(0);
 
-  sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_2";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(0);
+//  msg.item_name = "external_port_data_2";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(0);
 
-  sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_3";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(0);
+//  msg.item_name = "external_port_data_3";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(0);
 
-  sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_4";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(0);
+//  msg.item_name = "external_port_data_4";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(0);
 
-  sendSyncSWriteItemMsg(msg);
+//  sendSyncSWriteItemMsg(msg);
 }
 
 Eigen::MatrixXd QNode::rotationX( double angle )

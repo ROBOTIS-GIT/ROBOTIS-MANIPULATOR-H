@@ -185,66 +185,66 @@ void MainWindow::on_demo_stop_button_clicked( bool check )
 
 void MainWindow::on_laser_on_button_clicked( bool check )
 {
-  robotis_controller_msgs::SyncWriteItem msg, empty_msg;
+//  robotis_controller_msgs::SyncWriteItem msg, empty_msg;
 
-  msg.item_name = "external_port_data_1";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(1);
+//  msg.item_name = "external_port_data_1";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(1);
 
-  qnode.sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  qnode.sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_2";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(1);
+//  msg.item_name = "external_port_data_2";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(1);
 
-  qnode.sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  qnode.sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_3";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(1);
+//  msg.item_name = "external_port_data_3";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(1);
 
-  qnode.sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  qnode.sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_4";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(1);
+//  msg.item_name = "external_port_data_4";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(1);
 
-  qnode.sendSyncSWriteItemMsg(msg);
+//  qnode.sendSyncSWriteItemMsg(msg);
 }
 
 void MainWindow::on_laser_off_button_clicked( bool check )
 {
-  robotis_controller_msgs::SyncWriteItem msg, empty_msg;
+//  robotis_controller_msgs::SyncWriteItem msg, empty_msg;
 
-  msg.item_name = "external_port_data_1";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(0);
+//  msg.item_name = "external_port_data_1";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(0);
 
-  qnode.sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  qnode.sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_2";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(0);
+//  msg.item_name = "external_port_data_2";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(0);
 
-  qnode.sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  qnode.sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_3";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(0);
+//  msg.item_name = "external_port_data_3";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(0);
 
-  qnode.sendSyncSWriteItemMsg(msg);
-  msg = empty_msg;
+//  qnode.sendSyncSWriteItemMsg(msg);
+//  msg = empty_msg;
 
-  msg.item_name = "external_port_data_4";
-  msg.joint_name.push_back("grip");
-  msg.value.push_back(0);
+//  msg.item_name = "external_port_data_4";
+//  msg.joint_name.push_back("grip");
+//  msg.value.push_back(0);
 
-  qnode.sendSyncSWriteItemMsg(msg);
+//  qnode.sendSyncSWriteItemMsg(msg);
 }
 
 void MainWindow::update_curr_joint_pose_spinbox( manipulator_h_demo_module_msgs::JointPose msg )
