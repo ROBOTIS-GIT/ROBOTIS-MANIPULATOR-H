@@ -11,7 +11,6 @@
 - [ROBOTIS e-Manual for ROBOTIS MANIPULATOR-H](http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/)
 
 ## Wiki for manipulator_h Packages
-- http://wiki.ros.org/ROBOTIS-MANIPULATOR-H (robot description)
 - http://wiki.ros.org/manipulator_h (metapackage)
 - http://wiki.ros.org/manipulator_h_base_module
 - http://wiki.ros.org/manipulator_h_base_module_msgs
