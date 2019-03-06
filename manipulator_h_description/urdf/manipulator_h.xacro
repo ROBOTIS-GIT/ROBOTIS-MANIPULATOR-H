@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <!-- Revolute-Revolute Manipulator -->
 <robot name="robotis_manipulator_h" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- some parameters -->
+  <xacro:property name="pi" value="3.141592654" />
   
   <!-- some parameters -->
   <xacro:property name="pi" value="3.141592654" />

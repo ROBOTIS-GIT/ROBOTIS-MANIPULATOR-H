@@ -1,23 +1,22 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>manipulator_h_kinematics_dynamics</name>
-  <version>0.2.1</version>
+  <version>0.3.1</version>
   <description>
     The manipulator_h_kinematics_dynamics package
     This packages provides library of kinematics and dynamics information for ROBOTIS MANIPULATOR-H.
     Additionally, there are some function to calculate kinematics and dynamics.
   </description>
-  <license>BSD</license>
-  <author email="sch@robotis.com">sch</author>
-  <maintainer email="pyo@robotis.com">pyo</maintainer>
-  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
+  <license>Apache 2.0</license>
+  <author email="sch@robotis.com">SCH</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <url type="website">http://wiki.ros.org/manipulator_h_kinematics_dynamics</url>
+  <url type="emanual">http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/</url>
   <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
-  <url type="website">http://wiki.ros.org/ROBOTIS-MANIPULATOR-H</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>robotis_math</build_depend>
-  <build_depend>cmake_modules</build_depend>
-  <run_depend>roscpp</run_depend>
-  <run_depend>cmake_modules</run_depend>
-  <export></export>
+  <depend>roscpp</depend>
+  <depend>robotis_math</depend>
+  <depend>cmake_modules</depend>
+  <depend>eigen</depend>
 </package>

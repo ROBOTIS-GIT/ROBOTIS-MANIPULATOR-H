@@ -3,11 +3,10 @@
 <launch>
   <arg name="use_present" default="true" />
 
-  <param name="robot_description"
-         command="$(find xacro)/xacro.py '$(find manipulator_h_description)/urdf/manipulator_h.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find manipulator_h_description)/urdf/manipulator_h.xacro'" />
 
   <!-- send joint values -->
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
     <param name="use_gui" value="FALSE"/>
     <param name="rate" value="125"/>
     <remap from="/joint_states" to="/robotis/manipulator_h/joint_states" />
@@ -16,11 +15,11 @@
   </node>
 
   <!-- Combine joint values to TF-->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen">
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" respawn="true" output="screen">
     <remap from="/joint_states" to="/robotis/manipulator_h/joint_states"/>
   </node>
 
   <!-- Show in Rviz -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find manipulator_h_description)/launch/manipulator_h.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find manipulator_h_description)/launch/manipulator_h.rviz"/>
 
 </launch>

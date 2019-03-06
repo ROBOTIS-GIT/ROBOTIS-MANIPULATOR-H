@@ -1,32 +1,26 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>manipulator_h_gui</name>
-  <version>0.2.1</version>
+  <version>0.3.1</version>
   <description>
     The manipulator_h_gui package
     This package provides simple GUI to control ROBOTIS MANIPULATOR-H.
     This GUI is connected to manipulator_h_base_module.
   </description>
-  <license>BSD</license>
-  <author email="sch@robotis.com">sch</author>
-  <maintainer email="pyo@robotis.com">pyo</maintainer>
-  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
+  <license>Apache 2.0</license>
+  <author email="sch@robotis.com">SCH</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <url type="website">http://wiki.ros.org/manipulator_h_gui</url>
+  <url type="emanual">http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/</url>
   <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
-  <url type="website">http://wiki.ros.org/ROBOTIS-MANIPULATOR-H</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>qt_build</build_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>libqt4-dev</build_depend>
-  <build_depend>robotis_controller_msgs</build_depend>
-  <build_depend>manipulator_h_base_module_msgs</build_depend>
-  <build_depend>cmake_modules</build_depend>
-  <run_depend>qt_build</run_depend>
-  <run_depend>roscpp</run_depend>
-  <run_depend>libqt4-dev</run_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>eigen_conversions</build_depend>
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>eigen_conversions</run_depend>
-  <run_depend>cmake_modules</run_depend>
-  <export></export>
+  <depend>roscpp</depend>
+  <depend>robotis_controller_msgs</depend>
+  <depend>manipulator_h_base_module_msgs</depend>
+  <depend>qt_build</depend>
+  <depend>libqt4-dev</depend>
+  <depend>cmake_modules</depend>
+  <depend>eigen_conversions</depend>
+  <depend>eigen</depend>
 </package>

@@ -1,33 +1,32 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>manipulator_h_base_module</name>
-  <version>0.2.1</version>
+  <version>0.3.1</version>
   <description>
     The manipulator_h_base_module package
     This package describes basic function to control ROBOTIS MANIPULATOR-H.
     This module is based on position control.
     We provides joint space and task space control (forward kinematics, inverse kinematics).
   </description>
-  <license>BSD</license>
-  <author email="sch@robotis.com">sch</author>
-  <maintainer email="pyo@robotis.com">pyo</maintainer>
-  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
+  <license>Apache 2.0</license>
+  <author email="sch@robotis.com">SCH</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <url type="website">http://wiki.ros.org/manipulator_h_base_module</url>
+  <url type="emanual">http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/</url>
   <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H</url>
-  <url type="website">http://wiki.ros.org/ROBOTIS-MANIPULATOR-H</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H/issues</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>dynamixel_sdk</build_depend>
-  <build_depend>robotis_device</build_depend>
-  <build_depend>robotis_math</build_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>std_msgs</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>cmake_modules</build_depend>
-  <build_depend>manipulator_h_kinematics_dynamics</build_depend>
-  <build_depend>manipulator_h_base_module_msgs</build_depend>
-  <run_depend>robotis_device</run_depend>
-  <run_depend>roscpp</run_depend>
-  <run_depend>std_msgs</run_depend>
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>cmake_modules</run_depend>
-  <export></export>
+  <depend>roscpp</depend>
+  <depend>roslib</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>robotis_controller_msgs</depend>
+  <depend>manipulator_h_base_module_msgs</depend>
+  <depend>cmake_modules</depend>
+  <depend>robotis_math</depend>
+  <depend>robotis_framework_common</depend>
+  <depend>manipulator_h_kinematics_dynamics</depend>
+  <depend>boost</depend>
+  <depend>eigen</depend>
+  <depend>yaml-cpp</depend>
 </package>

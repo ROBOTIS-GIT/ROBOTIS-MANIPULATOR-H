@@ -1,5 +1,5 @@
 ################################################################################
-# CMake
+# Set minimum required version of cmake, project name and compile options
 ################################################################################
 cmake_minimum_required(VERSION 2.8.3)
 project(manipulator_h_gazebo)
@@ -10,23 +10,31 @@ project(manipulator_h_gazebo)
 find_package(catkin REQUIRED)
 
 ################################################################################
-# Catkin specific configuration
+# Setup for python modules and scripts
+################################################################################
+
+################################################################################
+# Declare ROS messages, services and actions
+################################################################################
+
+################################################################################
+# Declare ROS dynamic reconfigure parameters
+################################################################################
+
+################################################################################
+# Declare catkin specific configuration to be passed to dependent projects
 ################################################################################
 catkin_package()
 
 ################################################################################
+# Build
+################################################################################
+
+################################################################################
 # Install
 ################################################################################
-install(DIRECTORY launch/
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
-
-install(DIRECTORY config/
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
-
-install(DIRECTORY worlds/
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+install(DIRECTORY config launch worlds
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
 ################################################################################

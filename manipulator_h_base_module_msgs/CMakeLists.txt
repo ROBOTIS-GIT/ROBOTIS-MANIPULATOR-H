@@ -1,20 +1,21 @@
 ################################################################################
-# CMake
+# Set minimum required version of cmake, project name and compile options
 ################################################################################
 cmake_minimum_required(VERSION 2.8.3)
 project(manipulator_h_base_module_msgs)
 
 ################################################################################
-# Packages
+# Find catkin packages and libraries for catkin and system dependencies
 ################################################################################
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  rospy
   std_msgs
-  sensor_msgs
   geometry_msgs
   message_generation
 )
+
+################################################################################
+# Setup for python modules and scripts
+################################################################################
 
 ################################################################################
 # Declare ROS messages, services and actions
@@ -34,7 +35,6 @@ add_service_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
-  sensor_msgs
   geometry_msgs
 )
 
@@ -43,9 +43,11 @@ generate_messages(
 ################################################################################
 
 ################################################################################
-# Catkin specific configuration
+# Declare catkin specific configuration to be passed to dependent projects
 ################################################################################
-catkin_package()
+catkin_package(
+  CATKIN_DEPENDS std_msgs geometry_msgs message_runtime
+)
 
 ################################################################################
 # Build
