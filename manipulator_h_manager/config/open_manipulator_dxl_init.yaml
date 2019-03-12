@@ -1,4 +1,4 @@
-joint1 :   # H54-200-S500-R(A)
+joint1 :   # H54P-200-S500-R
    return_delay_time     :  10
    operating_mode        :  3
    shutdown              :  58
@@ -8,7 +8,7 @@ joint1 :   # H54-200-S500-R(A)
    position_p_gain       : 250 # 314
    velocity_p_gain       : 5500 #6153
 
-joint2 :   # H54-200-S500-R(A)
+joint2 :   # H54P-200-S500-R
    return_delay_time     :  10
    operating_mode        :  3
    shutdown              :  58
@@ -18,7 +18,7 @@ joint2 :   # H54-200-S500-R(A)
    position_p_gain       : 250 # 314
    velocity_p_gain       : 5500 #6153
 
-joint3 :   # H54-100-S500-R(A)
+joint3 :   # H54P-100-S500-R
    return_delay_time     :  10    # item name : value
    operating_mode        :  3
    shutdown              :  58
@@ -28,7 +28,7 @@ joint3 :   # H54-100-S500-R(A)
    position_p_gain       : 450 # 502
    velocity_p_gain       : 3400 #3593
 
-joint4 :   # H54-100-S500-R(A)
+joint4 :   # H54P-100-S500-R
    return_delay_time     :  10    # item name : value
    operating_mode        :  3
    shutdown              :  58
@@ -38,7 +38,7 @@ joint4 :   # H54-100-S500-R(A)
    position_p_gain       : 450 # 502
    velocity_p_gain       : 3400 #3593
 
-joint5  :   # H42-20-S300-R(A)
+joint5  :   # H42P-020-S300-R
    return_delay_time     : 10
    operating_mode        : 3
    shutdown              : 58
@@ -48,7 +48,7 @@ joint5  :   # H42-20-S300-R(A)
    position_p_gain       : 800 # 879
    velocity_p_gain       : 1332 # 1332
 
-joint6  :   # H42-20-S300-R(A)
+joint6  :   # H42P-020-S300-R
    return_delay_time     : 10
    operating_mode        : 3
    shutdown              : 58
