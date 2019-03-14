@@ -13,3 +13,4 @@ dynamixel | /dev/ttyUSB0 | 3   | H54P-100-S500-R | 2.0      | joint3   | present
 dynamixel | /dev/ttyUSB0 | 4   | H54P-100-S500-R | 2.0      | joint4   | present_position, present_voltage
 dynamixel | /dev/ttyUSB0 | 5   | H42P-020-S300-R | 2.0      | joint5   | present_position, present_voltage
 dynamixel | /dev/ttyUSB0 | 6   | H42P-020-S300-R | 2.0      | joint6   | present_position, present_voltage
+dynamixel | /dev/ttyUSB0 | 7   | RH-P12-RN(A)    | 2.0      | grip     | present_position, present_velocity

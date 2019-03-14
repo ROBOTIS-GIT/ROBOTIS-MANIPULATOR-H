@@ -1,11 +1,19 @@
 <?xml version="1.0" ?>
 <launch>    
-    <param name="gazebo"                   value="false"     type="bool"/>
-    <param name="gazebo_robot_name"        value="robotis_manipulator_h" />
-    <param name="offset_table"             value="$(find manipulator_h_manager)/config/offset.yaml"/>
+  <arg name="with_gripper"	   default="false" />
+  <param name="gazebo"                   value="false"     type="bool"/>
+  <param name="gazebo_robot_name"        value="robotis_manipulator_h" />
+  <param name="offset_table"             value="$(find manipulator_h_manager)/config/offset.yaml"/>
+
+  <group if="$(arg with_gripper)">
+    <param name="robot_file_path"          value="$(find manipulator_h_manager)/config/open_manipulator_p60_with_gripper.robot"/>
+    <param name="init_file_path"           value="$(find manipulator_h_manager)/config/open_manipulator_p60_with_gripper_dxl_init.yaml"/>
+  </group>
+  <group unless="$(arg with_gripper)">
     <param name="robot_file_path"          value="$(find manipulator_h_manager)/config/open_manipulator_p60.robot"/>
-    <param name="init_file_path"           value="$(find manipulator_h_manager)/config/open_manipulator_dxl_init.yaml"/>
-    <!-- Manipulator Manager -->
-    <node pkg="manipulator_h_manager" type="manipulator_h_manager" name="manipulator_h_manager" output="screen"/>
+    <param name="init_file_path"           value="$(find manipulator_h_manager)/config/open_manipulator_p60_dxl_init.yaml"/>
+  </group>
+  <!-- Manipulator Manager -->
+  <node pkg="manipulator_h_manager" type="manipulator_h_manager" name="manipulator_h_manager" output="screen"/>
 </launch>
 

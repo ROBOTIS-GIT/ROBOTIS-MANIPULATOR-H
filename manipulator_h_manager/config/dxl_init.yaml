@@ -29,7 +29,7 @@ joint2 :   # H54-200-S500-R
    velocity_i_gain       : 14
 
 joint3 :   # H54-100-S500-R
-   return_delay_time     :  10    # item name : value
+   return_delay_time     :  10  
    operating_mode        :  3
    shutdown              :  58
    homing_offset         :  -62738   # 45 deg
@@ -44,7 +44,7 @@ joint3 :   # H54-100-S500-R
    velocity_i_gain       : 16
 
 joint4 :   # H54-100-S500-R
-   return_delay_time     :  10    # item name : value
+   return_delay_time     :  10  
    operating_mode        :  3
    shutdown              :  58
    homing_offset         :  0
