@@ -20,10 +20,10 @@
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <group if="$(arg with_gripper)">
-    <param name="robot_description" command="$(find xacro)/xacro.py '$(find manipulator_h_description)/urdf/open_manipulator_p60_with_gripper.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find manipulator_h_description)/urdf/open_manipulator_pro_with_gripper.xacro'" />
   </group>
   <group unless="$(arg with_gripper)">
-    <param name="robot_description" command="$(find xacro)/xacro.py '$(find manipulator_h_description)/urdf/open_manipulator_p60.xacro'" />
+    <param name="robt_description" command="$(find xacro)/xacro.py '$(find manipulator_h_description)/urdf/open_manipulator_pro.xacro'" />
   </group>
   
 
