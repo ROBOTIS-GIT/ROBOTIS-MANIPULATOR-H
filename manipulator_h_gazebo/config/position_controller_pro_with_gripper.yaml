@@ -1,4 +1,4 @@
-robotis_manipulator_h:
+open_manipulator_pro:
   # Publish all joint states -----------------------------------
   joint_state_controller:
     type: joint_state_controller/JointStateController
